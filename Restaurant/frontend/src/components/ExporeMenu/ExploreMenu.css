@@ -1,0 +1,48 @@
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explore-menu h2 {
+  font-weight: 500;
+  color: #262626;
+  font-size: 2vw;
+}
+
+.explore-menu p {
+  font-weight: 200;
+}
+
+.explore-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+}
+
+.explore-menu-list-item {
+  padding-left: 2vw;
+  align-items: center;
+  text-align: center;
+}
+
+.explore-menu-list-item img {
+  padding-bottom: 0.5vw;
+  width: 7.5vw;
+  min-width: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.explore-menu-list-item p {
+  font-weight: 300;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}

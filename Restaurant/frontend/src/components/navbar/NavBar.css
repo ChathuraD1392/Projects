@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.navbar .logo {
+  width: 150px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 18px;
+  color: #49557e;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+}
+
+.navbar-menu .active {
+  padding-bottom: 5px;
+  border-bottom: 3px solid tomato;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.login-btn {
+  background: transparent;
+  border-radius: 50px;
+  color: #49557e;
+  font-size: 18px;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.4s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover {
+  background-color: tomato;
+  color: white;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+  border: none;
+  height: 1px;
+  background-color: tomato;
+}
+
+.navbar-bucket-icon {
+  position: relative;
+}
+
+.navbar-bucket-icon .dot {
+  position: absolute;
+  background-color: tomato;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
