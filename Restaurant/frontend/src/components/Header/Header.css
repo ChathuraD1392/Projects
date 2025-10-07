@@ -20,7 +20,7 @@
 
 .header-contents h2 {
   font-weight: 500;
-  font-size: max(4.5vw, 22px);
+  font-size: max(3.5vw, 22px);
   color: white;
 }
 
@@ -30,13 +30,13 @@
 }
 
 .header-contents button {
-  padding: 1vw 2.5vw;
+  padding: 0.75vw 2vw;
   font-weight: 500;
   border: none;
   border-radius: 50px;
   align-items: center;
   cursor: pointer;
-  font-size: max(1vw, 13px);
+  font-size: max(1vw, 18px);
   color: tomato;
   transition: 0.4s ease;
 }
@@ -44,4 +44,31 @@
 .header-contents button:hover {
   color: white;
   background-color: tomato;
+}
+
+@media (max-width: 1050px) {
+  .header {
+    height: 40vw;
+  }
+  .header-contents {
+    max-height: 45%;
+    bottom: 25%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-contents p {
+    display: none;
+  }
+  .header-contents h2 {
+    font-size: 4.5vw;
+  }
+  .header-contents {
+    max-height: 55%;
+  }
+
+  .header-contents button {
+    padding: 1vw 2vw;
+    margin-bottom: 10px;
+  }
 }

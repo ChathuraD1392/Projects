@@ -9,11 +9,7 @@ const Header = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             cupiditate labore dolorum nulla libero consectetur perspiciatis, ea
-            expedita fuga maxime incidunt totam aut assumenda voluptatibus vero
-            laudantium hic blanditiis omnis, beatae odio ad consequatur.
-            Repellendus magni eaque consectetur aspernatur perferendis labore
-            quam. Autem exercitationem deserunt facere itaque blanditiis
-            reprehenderit? Blanditiis.
+            expedita fuga maxime incidunt .
           </p>
           <button>View Menu</button>
         </div>
