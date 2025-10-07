@@ -5,10 +5,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Outfit;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
+  background-color: #ffffff;
 }
 
 a {
@@ -19,6 +21,7 @@ a {
 .app {
   width: 80%;
   margin: auto;
+  background-color: white;
 }
 
 hr {
