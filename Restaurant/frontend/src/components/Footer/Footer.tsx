@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <hr />
+        <hr className="hr" />
         <p className="footer-copyright">
           Copyright 2025 @ Tomato.com - All Right Reserved{" "}
         </p>

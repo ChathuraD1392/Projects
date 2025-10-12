@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./assets/Home/Home";
-import Order from "./assets/Order/Order";
+import Order from "./components/Order/Order";
 import AppDownload from "./components/AppDownload/AppDownload";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/navbar/NavBar";
 import { useState } from "react";
 import Login from "./components/LoginPopup/Login";
 import Cart from "./components/Cart/Cart";
+import Home from "./components/Home/Home";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);

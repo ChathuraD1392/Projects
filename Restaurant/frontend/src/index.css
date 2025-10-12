@@ -24,12 +24,6 @@ a {
   background-color: white;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  background-color: tomato;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
