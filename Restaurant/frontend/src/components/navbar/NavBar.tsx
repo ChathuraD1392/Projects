@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../assets/context/StoreContext";
 
 interface Props {
   setShowLogin: (showLogin: boolean) => void;
@@ -9,6 +10,7 @@ interface Props {
 
 const NavBar = ({ setShowLogin }: Props) => {
   const [selectedItem, setSelectedItem] = useState("home");
+  const { getTotalAmount } = useContext(StoreContext)!;
   return (
     <>
       <div className="navbar">
@@ -49,7 +51,7 @@ const NavBar = ({ setShowLogin }: Props) => {
           <img src={assets.search_icon} alt="search-icon" />
           <Link to="/cart" className="navbar-bucket-icon">
             <img src={assets.basket_icon} alt="addtocart-icon" />
-            <div className="dot"></div>
+            {getTotalAmount() > 0 && <div className="dot"></div>}
           </Link>
           <button onClick={() => setShowLogin(true)} className="login-btn">
             Sign In

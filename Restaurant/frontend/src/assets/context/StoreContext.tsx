@@ -19,6 +19,7 @@ interface StoreContextType {
   cartItems: CartItem[];
   addItem: (_id: string) => void;
   removeItem: (_id: string) => void;
+  getTotalAmount: () => number;
 }
 
 interface Props {
@@ -54,11 +55,16 @@ const StoreContextProvider = ({ children }: Props) => {
     );
   };
 
+  const getTotalAmount = () => {
+    return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  };
+
   const contextValue: StoreContextType = {
     foodList: food_list,
     cartItems,
     addItem,
     removeItem,
+    getTotalAmount,
   };
 
   return (

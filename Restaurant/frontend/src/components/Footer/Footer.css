@@ -55,6 +55,12 @@
   cursor: pointer;
 }
 
+.hr {
+  border: none;
+  height: 1px;
+  background-color: tomato;
+}
+
 @media (max-width: 750px) {
   .footer-content {
     display: flex;

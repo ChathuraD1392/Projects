@@ -65,6 +65,12 @@
   right: -8px;
 }
 
+.hr {
+  border: none;
+  height: 1px;
+  background-color: tomato;
+}
+
 @media (max-width: 1050px) {
   .navbar .logo {
     width: 140px;
