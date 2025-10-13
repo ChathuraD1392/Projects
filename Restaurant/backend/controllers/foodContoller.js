@@ -4,13 +4,20 @@ import fs from "fs";
 // add a food item
 
 const addItem = async (req, res) => {
-  let image_filename = `${req.file.filename}`;
+  let image_filename;
+  if (!req.file) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Image is required" });
+  } else {
+    image_filename = req.file.filename;
+  }
 
   const food = new foodModel({
     name: req.body.name,
     description: req.body.description,
     image: image_filename,
-    price: req.body.price,
+    price: Number(req.body.price),
     category: req.body.category,
   });
 
