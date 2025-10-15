@@ -15,7 +15,7 @@ const FoodItem = ({ _id, name, price, description, image }: Props) => {
   const store = useContext(StoreContext);
   if (!store) return null;
 
-  const { cartItems, addItem, removeItem } = store;
+  const { cartItems, addItem, removeItem, url } = store;
   const item = cartItems.find((i) => i._id === _id);
   const itemCount = item?.quantity || 0;
 
@@ -23,7 +23,11 @@ const FoodItem = ({ _id, name, price, description, image }: Props) => {
     <>
       <div className="food-item">
         <div className="food-item-img-container">
-          <img src={image} alt={name} className="food-item-image" />
+          <img
+            src={url + "/images/" + image}
+            alt={name}
+            className="food-item-image"
+          />
           {!itemCount ? (
             <img
               className="add"
