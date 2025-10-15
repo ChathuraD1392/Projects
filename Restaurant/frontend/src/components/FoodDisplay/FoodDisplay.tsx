@@ -7,8 +7,6 @@ const FoodDisplay = ({ category }: { category: string }) => {
   const store = useContext(StoreContext);
   if (!store) return null;
 
-  console.log(store.cartItems);
-
   const filtered =
     category === "all"
       ? store.foodList
