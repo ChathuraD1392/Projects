@@ -4,6 +4,7 @@ import { DBConnection } from "./config/db.js";
 import foodRouter from "./routes/foodRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import "dotenv/config.js";
+import cartRouter from "./routes/cartRoutes.js";
 
 // app config
 const app = express();
@@ -18,6 +19,7 @@ app.use(cors());
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter);
 
 app.get("/", (req, res) => {
   res.send("API is working");

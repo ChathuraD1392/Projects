@@ -13,7 +13,7 @@ const NavBar = ({ setShowLogin }: Props) => {
   const navigate = useNavigate();
   const { getTotalAmount, token, setToken } = useContext(StoreContext)!;
   const logoutHandler = () => {
-    localStorage.removeItem(token);
+    localStorage.removeItem("token");
     setToken("");
     navigate("/");
   };
