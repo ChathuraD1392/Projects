@@ -5,7 +5,8 @@ import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, removeItem, getTotalAmount } = useContext(StoreContext)!;
+  const { cartItems, removeItem, getTotalAmount, url } =
+    useContext(StoreContext)!;
   const total = getTotalAmount();
   let deliveryCharge = 0;
   if (total > 0) {
@@ -29,7 +30,7 @@ const Cart = () => {
           {cartItems.map((item, index) => (
             <div key={index}>
               <div className="cart-title cart-items-item">
-                <img src={item.image} alt="image" />
+                <img src={url + "/images/" + item.image} alt="image" />
                 <p>{item.name}</p>
                 <p>{item.price}</p>
                 <p>{item.quantity}</p>

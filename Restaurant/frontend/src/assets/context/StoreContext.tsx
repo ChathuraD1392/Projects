@@ -1,5 +1,5 @@
-import { createContext, useState, type ReactNode } from "react";
-import { food_list } from "../frontend_assets/assets";
+import { createContext, useEffect, useState, type ReactNode } from "react";
+import axios from "axios";
 
 interface FoodItem {
   _id: string;
@@ -20,6 +20,9 @@ interface StoreContextType {
   addItem: (_id: string) => void;
   removeItem: (_id: string) => void;
   getTotalAmount: () => number;
+  url: string;
+  token: string;
+  setToken: (t: string) => void;
 }
 
 interface Props {
@@ -30,6 +33,25 @@ export const StoreContext = createContext<StoreContextType | null>(null);
 
 const StoreContextProvider = ({ children }: Props) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const url = "http://localhost:4000";
+  const [token, setToken] = useState("");
+  const [food_list, setFoodList] = useState<FoodItem[]>([]);
+
+  const fetchFoodsList = async () => {
+    const response = await axios.get(url + "/api/food/list");
+    setFoodList(response.data.data);
+  };
+
+  useEffect(() => {
+    async function loadFoods() {
+      await fetchFoodsList();
+      const currentToken = localStorage.getItem("token");
+      if (currentToken) {
+        setToken(currentToken);
+      }
+    }
+    loadFoods();
+  }, []);
 
   const addItem = (_id: string) => {
     setCartItems((prev) => {
@@ -65,6 +87,9 @@ const StoreContextProvider = ({ children }: Props) => {
     addItem,
     removeItem,
     getTotalAmount,
+    url,
+    token,
+    setToken,
   };
 
   return (
