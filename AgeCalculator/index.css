@@ -71,3 +71,11 @@
   background-size: 30px;
   cursor: pointer;
 }
+
+#output {
+  font-size: 20px;
+  font-weight: 500;
+}
+#output span {
+  color: yellow;
+}

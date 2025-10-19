@@ -11,11 +11,16 @@
       <div class="calculator">
         <h1>Age <br /><span>Calculator</span></h1>
         <div class="input-box">
-          <input type="date" id="date" />
+          <input
+            type="date"
+            id="date"
+            placeholder="Select your birth date"
+            required
+          />
           <button onclick="calculateAge()">Calculate</button>
         </div>
+        <p id="output"></p>
       </div>
-      <p id="output"></p>
     </div>
     <script>
       let userInput = document.getElementById("date");
@@ -54,15 +59,14 @@
           d3 = d2 - d1;
         } else {
           m3--;
-          d3 = getDaysInMonth(y1, m1) + d2 - d1;
+          d3 = getDaysInMonth(y2, m2 - 1) + d2 - d1;
         }
         if (m3 < 0) {
           m3 = 11;
           y3--;
         }
+        output.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months, and <span>${d3}</span> days old.`;
       }
-
-      output.innerHTML = `${y3} years, ${m3} months, and ${d3} days old.`;
 
       function getDaysInMonth(year, month) {
         return new Date(year, month, 0).getDate();
