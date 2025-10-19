@@ -1,10 +1,11 @@
-import express from "express";
 import cors from "cors";
-import { DBConnection } from "./config/db.js";
-import foodRouter from "./routes/foodRoutes.js";
-import userRouter from "./routes/userRoutes.js";
 import "dotenv/config.js";
+import express from "express";
+import { DBConnection } from "./config/db.js";
 import cartRouter from "./routes/cartRoutes.js";
+import foodRouter from "./routes/foodRoutes.js";
+import orderRouter from "./routes/orderRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 
 // app config
 const app = express();
@@ -20,6 +21,7 @@ app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => {
   res.send("API is working");

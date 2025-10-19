@@ -43,8 +43,6 @@ const Add = () => {
     formData.append("category", data.category);
     if (image) formData.append("image", image);
 
-    console.log(formData);
-
     const response = await axios.post(`${url}/api/food/add`, formData);
     if (response.data.success) {
       setData({ name: "", description: "", price: "", category: "Salad" });

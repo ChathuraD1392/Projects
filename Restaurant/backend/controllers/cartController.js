@@ -23,7 +23,6 @@ const addToCart = async (req, res) => {
 const removeFromCart = async (req, res) => {
   try {
     let userData = await userModel.findById(req.userId);
-    console.log(userData);
     let cartData = await userData.cartData;
 
     if (cartData[req.body.itemId] > 0) {

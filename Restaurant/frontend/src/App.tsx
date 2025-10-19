@@ -8,6 +8,8 @@ import { useState } from "react";
 import Login from "./components/LoginPopup/Login";
 import Cart from "./components/Cart/Cart";
 import Home from "./components/Home/Home";
+import Verify from "./components/Verify/Verify";
+import MyOrders from "./components/MyOrders/MyOrders";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -20,6 +22,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/myorders" element={<MyOrders />} />
         </Routes>
         <AppDownload />
         <Footer />

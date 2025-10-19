@@ -67,7 +67,7 @@ const NavBar = ({ setShowLogin }: Props) => {
             <div className="navbar-profile">
               <img src={assets.profile_img} alt="profile icon" />
               <ul className="nav-profile-dropdown">
-                <li>
+                <li onClick={() => navigate("/myorders")}>
                   <img src={assets.bag_icon} alt="bag" />
                   <p>Orders</p>
                 </li>
