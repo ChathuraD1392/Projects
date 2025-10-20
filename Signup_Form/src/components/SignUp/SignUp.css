@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 10%;
+  background: #fff;
+  padding-bottom: 30px;
+  width: 550px;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 5%;
+  color: rgb(4, 58, 103);
+}
+
+.header h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: rgb(4, 58, 103);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputCover {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(245, 243, 243);
+  margin: 10px;
+  padding: 10px 15px 10px 20px;
+  border-radius: 10px;
+  gap: 25px;
+}
+.inputBox input {
+  border: 0;
+  outline: 0;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(245, 243, 243);
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.btnBox .login {
+  outline: 0;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: rgb(4, 58, 103);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btnBox .reset {
+  outline: 0;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid rgb(4, 58, 103);
+  color: rgb(4, 58, 103);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnBox .reset:hover {
+  transition-timing-function: ease-in;
+  background-color: rgb(4, 58, 103);
+  color: #fff;
+}
+
+.footer span {
+  text-decoration: underline;
+  color: rgb(4, 58, 103);
+  font-weight: 500;
+  cursor: pointer;
+}
