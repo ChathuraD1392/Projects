@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import clear from "../assets/clear.png";
+import humudity from "../assets/humidity.png";
+import wind from "../assets/wind.png";
 import { weatherImageMap } from "../services/Images";
 import "./Weather.css";
 
@@ -23,9 +25,10 @@ interface Weather {
 }
 
 const Weather = () => {
+  let temp = 0;
   const [data, setData] = useState<Weather>();
   const [city, setCity] = useState("");
-  const [weatherNow, setWeatherNow] = useState<string>();
+  const [weatherNow, setWeatherNow] = useState<string>(clear);
   const apikey = "148a6b893506bc1174d213517f244dac";
   const apiurl =
     "https://api.openweathermap.org/data/2.5/weather?units?metric&q=";
@@ -42,6 +45,9 @@ const Weather = () => {
     setCity(e.target.value);
   };
 
+  if (data?.main != null) {
+    temp = Number((((data.main.temp - 32) * 5) / 9).toFixed(2));
+  }
   return (
     <>
       <div className="container">
@@ -63,11 +69,18 @@ const Weather = () => {
         <div className="display">
           <h2>City : {data?.name}</h2>
           <img src={weatherNow} alt="mainImage" />
-          <h3>Temperature : {data?.main.temp} °C</h3>
+          <h3>Temperature : {temp} °C</h3>
         </div>
         <div className="footer">
-          <h3>Humidity : {data?.main.humidity}</h3>
-          <h3>Wind Speed : {data?.wind.speed} kmpH</h3>
+          <div className="footerOptions">
+            <img src={humudity} alt="Humudity" />
+            <h3>Humidity : {data?.main.humidity}</h3>
+          </div>
+          <div className="divider"></div>
+          <div className="footerOptions">
+            <img src={wind} alt="Wind" />
+            <h3>Wind : {data?.wind.speed} kmpH</h3>
+          </div>
         </div>
       </div>
     </>
