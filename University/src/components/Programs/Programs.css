@@ -44,3 +44,14 @@
   opacity: 0.5;
   padding-top: 0;
 }
+
+@media (max-width: 840px) {
+  .programs {
+    flex-direction: column;
+  }
+
+  .program {
+    flex-basis: 100%;
+    margin: 20px;
+  }
+}

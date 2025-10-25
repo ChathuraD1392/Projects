@@ -65,3 +65,38 @@
 .user-info h3 {
   color: #212ea0;
 }
+
+@media (max-width: 840px) {
+  .testimonials {
+    padding: 0px 40px;
+  }
+  .next,
+  .back {
+    padding: 10px;
+    width: 35px;
+  }
+  .testimonials ul li {
+    padding: 10px;
+  }
+  .slide {
+    padding: 10px;
+  }
+  .slide img {
+    width: 50px;
+    border: 2px solid #212ea0;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-info {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .user-info h3 {
+    font-size: 16px;
+  }
+  .slider p {
+    font-size: 12px;
+  }
+}

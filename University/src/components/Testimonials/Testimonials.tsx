@@ -6,7 +6,6 @@ import { useRef } from "react";
 
 const Testimonials = () => {
   const slider = useRef<HTMLUListElement | null>(null);
-  console.log(slider.current);
   let tx = 0;
 
   const slideBackward = () => {

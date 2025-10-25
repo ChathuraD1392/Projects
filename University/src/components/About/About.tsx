@@ -1,14 +1,23 @@
-import "./About.css";
 import about from "../../assets/about.png";
 import play from "../../assets/play-icon.png";
+import "./About.css";
 
-const About = () => {
+interface Props {
+  setVideoPlay: (isPlay: boolean) => void;
+}
+
+const About = ({ setVideoPlay }: Props) => {
   return (
     <>
       <div className="about">
         <div className="about-left">
           <img src={about} alt="about-img" className="about-img" />
-          <img src={play} alt="play-img" className="play-img" />
+          <img
+            src={play}
+            alt="play-img"
+            className="play-img"
+            onClick={() => setVideoPlay(true)}
+          />
         </div>
         <div className="about-right">
           <h3>ABOUT UNIVERSITY</h3>

@@ -20,3 +20,14 @@
   background-color: #212ea0;
   color: #fff;
 }
+
+@media (max-width: 840px) {
+  .gallery {
+    flex-wrap: wrap;
+  }
+
+  .gallery img {
+    width: 47%;
+    margin-bottom: 25px;
+  }
+}

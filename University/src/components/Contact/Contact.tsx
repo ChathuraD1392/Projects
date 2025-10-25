@@ -8,7 +8,7 @@ import { useState, type FormEvent } from "react";
 
 const Contact = () => {
   const key = import.meta.env.VITE_SECRET_KEY;
-  console.log(key);
+
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
