@@ -5,6 +5,7 @@ import phone from "../../assets/phone-icon.png";
 import location from "../../assets/location-icon.png";
 import whiteArrow from "../../assets/white-arrow.png";
 import { useState, type FormEvent } from "react";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const key = import.meta.env.VITE_SECRET_KEY;
@@ -32,10 +33,10 @@ const Contact = () => {
 
       const result = await response.json();
       if (result.success) {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({ name: "", mobile: "", message: "" });
       } else {
-        alert("Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
       alert("An error occurred. Please try again.");

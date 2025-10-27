@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Title from "./components/Title/Title";
 import University from "./components/University/University";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [isVideoPlay, setVideoPlay] = useState(false);
@@ -17,6 +18,7 @@ const App = () => {
     <>
       <div>
         <NavBar />
+        <ToastContainer />
         <Cover />
         <div className="container">
           <Title subtitle="Our Programs" title="What we Offer" />
